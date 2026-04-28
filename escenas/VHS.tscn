@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cyko280on1xfx"]
+
+[ext_resource type="Shader" uid="uid://cq4581mhpnqky" path="res://VHS_Shader.gdshader" id="1_6vrls"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r3lrq"]
+shader = ExtResource("1_6vrls")
+shader_parameter/shake = 0.1
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=976269947]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2133505527]
+material = SubResource("ShaderMaterial_r3lrq")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
