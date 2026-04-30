@@ -22,7 +22,8 @@ func apply_gravity(delta):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-
+func die():
+	get_tree().reload_current_scene()
 
 func state_machine(delta):
 	match state:

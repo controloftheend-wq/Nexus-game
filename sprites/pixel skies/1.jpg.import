@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcd1m27y032dn"
-path="res://.godot/imported/nexus.jpg-a314e9225f1d8b31f2799e1f9647ebc1.ctex"
+uid="uid://bve77owk7mgn6"
+path="res://.godot/imported/1.jpg-fb09f489400f29e47414b89611388622.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scripts/nexus.jpg"
-dest_files=["res://.godot/imported/nexus.jpg-a314e9225f1d8b31f2799e1f9647ebc1.ctex"]
+source_file="res://sprites/pixel skies/1.jpg"
+dest_files=["res://.godot/imported/1.jpg-fb09f489400f29e47414b89611388622.ctex"]
 
 [params]
 

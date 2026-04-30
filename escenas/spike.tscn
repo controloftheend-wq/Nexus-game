@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c215im6l52o6v"]
+
+[ext_resource type="Script" uid="uid://bevwi6ko1ujkf" path="res://scripts/spike.gd" id="1_d5iew"]
+[ext_resource type="Shader" uid="uid://b16i0gvaloyh3" path="res://shader/brillo.gdshader" id="2_wh2o7"]
+[ext_resource type="Texture2D" uid="uid://dc8gwforn8vkv" path="res://sprites/16-bit-spike-Sheet.png" id="3_hoc3s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5iew"]
+size = Vector2(9, 38)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p45v3"]
+shader = ExtResource("2_wh2o7")
+shader_parameter/Angle_deg = 30.0
+shader_parameter/Brightness = 2.5
+shader_parameter/Band_Soft = 0.06
+shader_parameter/Stage_Count = 2
+shader_parameter/Stage1_Duration = 1.0
+shader_parameter/Stage2_Duration = 1.5
+shader_parameter/Stage3_Duration = 1.0
+shader_parameter/Stage1_Width = 0.12
+shader_parameter/Stage2_Width = 0.12
+shader_parameter/Stage3_Width = 0.12
+shader_parameter/Stage1_LeftToRight = true
+shader_parameter/Stage2_LeftToRight = false
+shader_parameter/Stage3_LeftToRight = true
+shader_parameter/One_Shot = false
+shader_parameter/OneShot_Delay = 0.0
+shader_parameter/Phase_Offset = 0.0
+shader_parameter/Wiggle_Angle = false
+shader_parameter/Wiggle_Amount_deg = 15.0
+shader_parameter/Shine_Pause = 0.4
+
+[node name="Node2D" type="Area2D" unique_id=169876842 groups=["player"]]
+script = ExtResource("1_d5iew")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1762790420]
+position = Vector2(321.5, 333)
+shape = SubResource("RectangleShape2D_d5iew")
+
+[node name="16BitSpikeSheet" type="Sprite2D" parent="." unique_id=925695958]
+material = SubResource("ShaderMaterial_p45v3")
+position = Vector2(321, 329)
+scale = Vector2(3, 3)
+texture = ExtResource("3_hoc3s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cyko280on1xfx"]
 
-[ext_resource type="Shader" uid="uid://cq4581mhpnqky" path="res://VHS_Shader.gdshader" id="1_6vrls"]
+[ext_resource type="Shader" uid="uid://cq4581mhpnqky" path="res://shader/VHS_Shader.gdshader" id="1_6vrls"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r3lrq"]
 shader = ExtResource("1_6vrls")

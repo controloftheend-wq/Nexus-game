@@ -15,6 +15,10 @@ run/main_scene="uid://vetsi7hna76e"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://dcd1m27y032dn"
 
+[global_group]
+
+player=""
+
 [input]
 
 left={

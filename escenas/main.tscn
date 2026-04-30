@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://6sck85xh7s1n" path="res://sprites/Night/4.png" id="4_dg7ii"]
 [ext_resource type="Texture2D" uid="uid://cfk8o1vmvtm5g" path="res://sprites/Night/5.png" id="5_woaio"]
 [ext_resource type="PackedScene" uid="uid://cyko280on1xfx" path="res://escenas/VHS.tscn" id="8_68mvh"]
+[ext_resource type="PackedScene" uid="uid://c215im6l52o6v" path="res://escenas/spike.tscn" id="9_lyxkq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_26pgj"]
 texture = ExtResource("2_jumxm")
@@ -503,13 +504,49 @@ scale = Vector2(2.0052083, 1.712963)
 texture = ExtResource("5_woaio")
 
 [node name="Node2D" parent="." unique_id=48145349 instance=ExtResource("2_0kxa1")]
-position = Vector2(18, -69)
+position = Vector2(-330, 144)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1691938963]
 scale = Vector2(4, 4)
-tile_map_data = PackedByteArray("AAAAAAgAAAAPAAUAAAABAAgAAAAQAAUAAAACAAgAAAAQAAUAAAADAAgAAAAQAAUAAAAEAAgAAAAQAAUAAAAFAAgAAAAQAAUAAAAGAAgAAAAQAAUAAAAHAAgAAAAQAAUAAAAIAAgAAAAQAAUAAAAJAAgAAAAQAAUAAAAKAAgAAAAQAAUAAAALAAgAAAAQAAUAAAAMAAgAAAAQAAUAAAANAAgAAAAQAAUAAAAOAAgAAAAQAAUAAAAPAAgAAAAQAAUAAAAQAAgAAAAQAAUAAAARAAgAAAARAAUAAAAQAAkAAAAQAAYAAAAPAAkAAAAQAAYAAAAOAAkAAAAQAAYAAAANAAkAAAAQAAYAAAAMAAkAAAAQAAYAAAALAAkAAAAQAAYAAAAKAAkAAAAQAAYAAAAJAAkAAAAQAAYAAAAIAAkAAAAQAAYAAAAHAAkAAAAQAAYAAAARAAkAAAARAAYAAAAGAAkAAAAQAAYAAAAFAAkAAAAQAAYAAAAEAAkAAAAQAAYAAAADAAkAAAAQAAYAAAACAAkAAAAQAAYAAAABAAkAAAAQAAYAAAAAAAkAAAAPAAYAAAAAAAoAAAAPAAcAAAABAAoAAAAQAAcAAAACAAoAAAAQAAcAAAADAAoAAAAQAAcAAAAEAAoAAAAQAAcAAAAFAAoAAAAQAAcAAAAGAAoAAAAQAAcAAAAHAAoAAAAQAAcAAAAIAAoAAAAQAAcAAAAJAAoAAAAQAAcAAAAKAAoAAAAQAAcAAAALAAoAAAAQAAcAAAAMAAoAAAAQAAcAAAANAAoAAAAQAAcAAAAOAAoAAAAQAAcAAAAPAAoAAAAQAAcAAAAQAAoAAAAQAAcAAAARAAoAAAARAAcAAAAGAAUAAAAEAAUAAAAHAAUAAAAFAAUAAAAJAAUAAAAGAAUAAAAIAAUAAAAFAAUAAAA=")
+tile_map_data = PackedByteArray("AAAAAAgAAAAPAAUAAAABAAgAAAAQAAUAAAACAAgAAAAQAAUAAAADAAgAAAARAAUAAAANAAgAAAAPAAUAAAAOAAgAAAAQAAUAAAAPAAgAAAAQAAUAAAAQAAgAAAAQAAUAAAARAAgAAAARAAUAAAAQAAkAAAAQAAYAAAAPAAkAAAAQAAYAAAAOAAkAAAAQAAYAAAANAAkAAAAPAAYAAAARAAkAAAARAAYAAAACAAkAAAAQAAYAAAABAAkAAAAQAAYAAAAAAAkAAAAPAAYAAAAAAAoAAAAPAAYAAAABAAoAAAAQAAYAAAACAAoAAAAQAAYAAAADAAoAAAAQAAYAAAANAAoAAAAQAAYAAAAOAAoAAAAQAAYAAAAPAAoAAAAQAAYAAAAQAAoAAAAQAAYAAAARAAoAAAARAAYAAAADAAkAAAARAAYAAAAEAAoAAAAQAAUAAAAFAAoAAAAQAAUAAAAGAAoAAAAQAAUAAAAHAAoAAAAQAAUAAAAIAAoAAAAQAAUAAAAJAAoAAAAQAAUAAAAKAAoAAAAQAAUAAAALAAoAAAAQAAUAAAAMAAoAAAAQAAUAAAADAAsAAAAQAAcAAAACAAsAAAAQAAcAAAABAAsAAAAQAAcAAAAAAAsAAAAPAAcAAAAEAAsAAAAQAAcAAAAFAAsAAAAQAAcAAAAGAAsAAAAQAAcAAAAHAAsAAAAQAAcAAAAIAAsAAAAQAAcAAAAJAAsAAAAQAAcAAAAKAAsAAAAQAAcAAAALAAsAAAAQAAcAAAAMAAsAAAAQAAcAAAANAAsAAAAQAAcAAAAOAAsAAAAQAAcAAAAPAAsAAAAQAAcAAAAQAAsAAAAQAAcAAAARAAsAAAARAAcAAAA=")
 tile_set = SubResource("TileSet_dkga6")
 use_kinematic_bodies = true
 physics_quadrant_size = 17
 
 [node name="CanvasLayer" parent="." unique_id=976269947 instance=ExtResource("8_68mvh")]
+
+[node name="Node2D2" parent="." unique_id=1847286695 instance=ExtResource("9_lyxkq")]
+position = Vector2(-42, 285)
+
+[node name="Node2D3" parent="." unique_id=703042077 instance=ExtResource("9_lyxkq")]
+position = Vector2(6, 285)
+
+[node name="Node2D4" parent="." unique_id=139443585 instance=ExtResource("9_lyxkq")]
+position = Vector2(53, 285)
+
+[node name="Node2D5" parent="." unique_id=1316027574 instance=ExtResource("9_lyxkq")]
+position = Vector2(101, 285)
+
+[node name="Node2D6" parent="." unique_id=1441048975 instance=ExtResource("9_lyxkq")]
+position = Vector2(149, 285)
+
+[node name="Node2D7" parent="." unique_id=942985586 instance=ExtResource("9_lyxkq")]
+position = Vector2(197, 285)
+
+[node name="Node2D8" parent="." unique_id=1725913440 instance=ExtResource("9_lyxkq")]
+position = Vector2(244, 285)
+
+[node name="Node2D9" parent="." unique_id=1863671120 instance=ExtResource("9_lyxkq")]
+position = Vector2(292, 285)
+
+[node name="Node2D10" parent="." unique_id=1936959943 instance=ExtResource("9_lyxkq")]
+position = Vector2(340, 285)
+
+[node name="Node2D11" parent="." unique_id=644311791 instance=ExtResource("9_lyxkq")]
+position = Vector2(388, 285)
+
+[node name="Node2D12" parent="." unique_id=930556111 instance=ExtResource("9_lyxkq")]
+position = Vector2(435, 285)
+
+[node name="Node2D13" parent="." unique_id=478599220 instance=ExtResource("9_lyxkq")]
+position = Vector2(483, 285)
