@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ceg822bxessct" path="res://sprites/Nexus idle.png" id="2_25k51"]
 [ext_resource type="Texture2D" uid="uid://3y7xg2qdwlwd" path="res://sprites/Nexus walk.png" id="3_1xr2y"]
 [ext_resource type="Texture2D" uid="uid://b3pa2mgcvx2pd" path="res://sprites/Nexus jump.png" id="3_bvbmf"]
+[ext_resource type="Texture2D" uid="uid://bt7ixhdtvf66r" path="res://sprites/Nexus die.png" id="5_cwvl7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1xr2y"]
 atlas = ExtResource("2_25k51")
@@ -51,6 +52,22 @@ region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a4vc1"]
 atlas = ExtResource("3_1xr2y")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq3oc"]
+atlas = ExtResource("5_cwvl7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45va0"]
+atlas = ExtResource("5_cwvl7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8odhn"]
+atlas = ExtResource("5_cwvl7")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8awu8"]
+atlas = ExtResource("5_cwvl7")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s4uq1"]
@@ -105,24 +122,43 @@ animations = [{
 "loop": true,
 "name": &"Walk",
 "speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jq3oc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45va0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8odhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8awu8")
+}],
+"loop": false,
+"name": &"death",
+"speed": 9.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25k51"]
 size = Vector2(20.999992, 25.333328)
 
-[node name="Node2D" type="CharacterBody2D" unique_id=48145349]
+[node name="player" type="CharacterBody2D" unique_id=48145349 groups=["player"]]
 script = ExtResource("1_25k51")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1853093608]
 position = Vector2(434, 312)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_s4uq1")
-animation = &"Jump"
+animation = &"death"
+frame = 3
+frame_progress = 1.0
+
+[node name="Timer" type="Timer" parent="." unique_id=72110388]
+one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1083510037]
 position = Vector2(435.5, 322)
 scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_25k51")
-
-[node name="Timer" type="Timer" parent="." unique_id=72110388]
-one_shot = true
