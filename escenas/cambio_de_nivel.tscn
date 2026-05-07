@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://718s308qpndq"]
+
+[ext_resource type="Shader" uid="uid://bksaj4cwn77vb" path="res://escenas/hologram.gdshader" id="1_ewqfe"]
+[ext_resource type="Texture2D" uid="uid://cau15kdlvdbh" path="res://sprites/New Piskel.png" id="2_cdb0p"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ispwc"]
+shader = ExtResource("1_ewqfe")
+shader_parameter/intensity = 0.6
+shader_parameter/speed = 4.0
+shader_parameter/block_size = 18.0
+shader_parameter/rgb_shift = 0.008
+shader_parameter/fade_power = 2.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gxgf"]
+size = Vector2(128, 129)
+
+[node name="cambio_de_nivel" type="Node2D" unique_id=1625069691]
+
+[node name="NewPiskel" type="Sprite2D" parent="." unique_id=2061661777]
+material = SubResource("ShaderMaterial_ispwc")
+position = Vector2(95, 83)
+scale = Vector2(2, 2)
+texture = ExtResource("2_cdb0p")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2084245241]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2075753939]
+position = Vector2(94, 82)
+shape = SubResource("RectangleShape2D_8gxgf")

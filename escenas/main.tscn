@@ -1,14 +1,11 @@
 [gd_scene format=4 uid="uid://vetsi7hna76e"]
 
-[ext_resource type="Shader" uid="uid://bkcarxjuiyx28" path="res://escenas/fondo.gdshader" id="1_a8p2b"]
-[ext_resource type="Texture2D" uid="uid://bve77owk7mgn6" path="res://sprites/pixel skies/1.jpg" id="1_dkga6"]
+[ext_resource type="Texture2D" uid="uid://da7wg84l1jn2i" path="res://sprites/pixelart_starfield_diagonal_diffraction_spikes.png" id="1_a8p2b"]
 [ext_resource type="PackedScene" uid="uid://dkhqeyy1mgvsd" path="res://escenas/nexus.tscn" id="2_0kxa1"]
 [ext_resource type="Texture2D" uid="uid://dogxkp5e57ty2" path="res://sprites/1 Tiles/Tileset.png" id="4_a8p2b"]
+[ext_resource type="PackedScene" uid="uid://718s308qpndq" path="res://escenas/cambio_de_nivel.tscn" id="6_a8p2b"]
 [ext_resource type="PackedScene" uid="uid://cyko280on1xfx" path="res://escenas/VHS.tscn" id="8_68mvh"]
 [ext_resource type="PackedScene" uid="uid://c215im6l52o6v" path="res://escenas/spike.tscn" id="9_lyxkq"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_a8p2b"]
-shader = ExtResource("1_a8p2b")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o8odp"]
 texture = ExtResource("4_a8p2b")
@@ -319,11 +316,13 @@ sources/1 = SubResource("TileSetAtlasSource_o8odp")
 
 [node name="Node2D" type="Node2D" unique_id=1403129199]
 
-[node name="1" type="Sprite2D" parent="." unique_id=109623682]
-material = SubResource("ShaderMaterial_a8p2b")
-position = Vector2(578.49994, 360.5)
-scale = Vector2(0.5745, 0.717)
-texture = ExtResource("1_dkga6")
+[node name="PixelartStarfieldDiagonalDiffractionSpikes" type="Sprite2D" parent="." unique_id=1843475117]
+position = Vector2(582.5, 390)
+scale = Vector2(3.646875, 2.4875)
+texture = ExtResource("1_a8p2b")
+
+[node name="cambio_de_nivel" parent="." unique_id=1625069691 instance=ExtResource("6_a8p2b")]
+position = Vector2(928, 356)
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1529579658]
 

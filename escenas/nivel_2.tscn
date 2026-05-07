@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cv2ft27atc2mm"]
+
+[node name="Nivel 2" type="Node2D" unique_id=946252697]
+
+[node name="Label" type="Label" parent="." unique_id=1156434288]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "adsdgfsgsgsg"
