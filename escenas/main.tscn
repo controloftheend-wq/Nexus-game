@@ -322,7 +322,7 @@ scale = Vector2(3.646875, 2.4875)
 texture = ExtResource("1_a8p2b")
 
 [node name="cambio_de_nivel" parent="." unique_id=1625069691 instance=ExtResource("6_a8p2b")]
-position = Vector2(928, 356)
+position = Vector2(934, 366)
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1529579658]
 
