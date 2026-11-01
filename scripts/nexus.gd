@@ -30,7 +30,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-# ------------------ CAMBIO DE ESTADO ------------------
+
 
 func change_state(new_state: State):
 	state = new_state
@@ -46,7 +46,7 @@ func change_state(new_state: State):
 			sprite.play("death")
 
 
-# ------------------ ESTADOS ------------------
+
 
 func state_idle():
 	velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -99,14 +99,14 @@ func state_death():
 	pass
 
 
-# ------------------ GRAVEDAD ------------------
+
 
 func apply_gravity(delta):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
 
-# ------------------ MUERTE ------------------
+
 
 func die():
 	if state == State.DEATH:
