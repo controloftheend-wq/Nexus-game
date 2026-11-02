@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dkhqeyy1mgvsd" path="res://escenas/nexus.tscn" id="1_m8tcc"]
 [ext_resource type="PackedScene" uid="uid://cyko280on1xfx" path="res://escenas/VHS.tscn" id="3_guw5e"]
 [ext_resource type="PackedScene" uid="uid://c215im6l52o6v" path="res://escenas/spike.tscn" id="3_r4340"]
+[ext_resource type="PackedScene" uid="uid://b0bkhgtgefd2y" path="res://escenas/PauseMenu.tscn" id="3_u3nn2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m8tcc"]
 texture = ExtResource("1_i3j66")
@@ -318,6 +319,9 @@ sources/1 = SubResource("TileSetAtlasSource_m8tcc")
 position = Vector2(-277, -179)
 
 [node name="CanvasLayer" parent="." unique_id=976269947 instance=ExtResource("3_guw5e")]
+
+[node name="Control" parent="CanvasLayer" unique_id=1892876936 instance=ExtResource("3_u3nn2")]
+visible = false
 
 [node name="Node2D2" parent="." unique_id=169876842 instance=ExtResource("3_r4340")]
 position = Vector2(-41, 287)

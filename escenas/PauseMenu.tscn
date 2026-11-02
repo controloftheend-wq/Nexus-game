@@ -1,17 +1,13 @@
 [gd_scene format=3 uid="uid://b0bkhgtgefd2y"]
 
 [ext_resource type="Script" uid="uid://dnefwppf7pg2f" path="res://scripts/pause_menu.gd" id="1_m1gaa"]
-[ext_resource type="Texture2D" uid="uid://djeyo2abxac3r" path="res://sprites/Nexus idle-1.png.png" id="2_kilm7"]
-[ext_resource type="Texture2D" uid="uid://cau15kdlvdbh" path="res://sprites/New Piskel.png" id="3_d6gah"]
-[ext_resource type="Texture2D" uid="uid://bt7ixhdtvf66r" path="res://sprites/Nexus die.png" id="4_gdt5a"]
-[ext_resource type="Texture2D" uid="uid://dcd1m27y032dn" path="res://sprites/nexus.jpg" id="5_7g23m"]
+[ext_resource type="Texture2D" uid="uid://tx5dasdgahpm" path="res://sprites/Nexus idle-2.png.png" id="2_j8buq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0yqr"]
 bg_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control" unique_id=1892876936]
 process_mode = 3
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,21 +40,20 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_f0yqr")
 layout_mode = 2
 theme_override_constants/separation = 88
 
-[node name="Continuar" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1623248014]
-layout_mode = 2
-text = "Continuar"
-
 [node name="Ajustes" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1424753643]
 layout_mode = 2
 text = "Ajustes"
+expand_icon = true
 
 [node name="MenuPrincipal" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1002822834]
 layout_mode = 2
 text = "Menu Principal"
+expand_icon = true
 
 [node name="Salir" type="Button" parent="PanelContainer/VBoxContainer" unique_id=427082314]
 layout_mode = 2
 text = "Salir"
+expand_icon = true
 
 [node name="PanelContainer2" type="PanelContainer" parent="." unique_id=855816389]
 layout_mode = 1
@@ -67,33 +62,133 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -605.0
+offset_left = -492.0
 offset_top = -266.0
-offset_bottom = 103.0
+offset_bottom = -18.0
 grow_horizontal = 0
 grow_vertical = 2
 
 [node name="GridContainer" type="GridContainer" parent="PanelContainer2" unique_id=1739724767]
 layout_mode = 2
-columns = 2
+columns = 4
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer2/GridContainer" unique_id=799911461]
+[node name="Slot0" type="Button" parent="PanelContainer2/GridContainer" unique_id=1749384931]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-texture = ExtResource("2_kilm7")
+size_flags_horizontal = 2
+size_flags_vertical = 3
+icon = ExtResource("2_j8buq")
+expand_icon = true
 
-[node name="TextureRect2" type="TextureRect" parent="PanelContainer2/GridContainer" unique_id=1684603832]
+[node name="Slot1" type="Button" parent="PanelContainer2/GridContainer" unique_id=870658751]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-texture = ExtResource("3_d6gah")
+size_flags_horizontal = 2
+size_flags_vertical = 3
+icon = ExtResource("2_j8buq")
+expand_icon = true
 
-[node name="TextureRect3" type="TextureRect" parent="PanelContainer2/GridContainer" unique_id=1893330278]
+[node name="Slot2" type="Button" parent="PanelContainer2/GridContainer" unique_id=1459299521]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-texture = ExtResource("4_gdt5a")
+size_flags_horizontal = 2
+size_flags_vertical = 3
+icon = ExtResource("2_j8buq")
+expand_icon = true
 
-[node name="TextureRect4" type="TextureRect" parent="PanelContainer2/GridContainer" unique_id=754372910]
+[node name="Slot3" type="Button" parent="PanelContainer2/GridContainer" unique_id=2146855700]
+custom_minimum_size = Vector2(120, 120)
 layout_mode = 2
-texture = ExtResource("5_7g23m")
+size_flags_horizontal = 2
+size_flags_vertical = 3
+icon = ExtResource("2_j8buq")
+expand_icon = true
 
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
+[node name="Slot4" type="Button" parent="PanelContainer2/GridContainer" unique_id=600516868]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+icon = ExtResource("2_j8buq")
+expand_icon = true
+
+[node name="Slot5" type="Button" parent="PanelContainer2/GridContainer" unique_id=1996267116]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+icon = ExtResource("2_j8buq")
+expand_icon = true
+
+[node name="Slot6" type="Button" parent="PanelContainer2/GridContainer" unique_id=115268978]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+icon = ExtResource("2_j8buq")
+expand_icon = true
+
+[node name="Slot7" type="Button" parent="PanelContainer2/GridContainer" unique_id=1007832500]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+icon = ExtResource("2_j8buq")
+expand_icon = true
+
+[node name="PanelContainer3" type="PanelContainer" parent="." unique_id=221208692]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -492.0
+offset_top = -340.0
+offset_right = -2.0
+offset_bottom = -259.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer3" unique_id=1198440039]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="PanelContainer3/VBoxContainer" unique_id=120526934]
+layout_mode = 2
+text = "Nombre:"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer3/VBoxContainer" unique_id=2053678734]
+layout_mode = 2
+text = "Descripcion:"
+horizontal_alignment = 1
+
+[node name="PanelContainer4" type="PanelContainer" parent="." unique_id=640973057]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -492.0
+offset_top = 70.0
+offset_bottom = 169.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer4" unique_id=849896701]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer4/VBoxContainer" unique_id=609847269]
+layout_mode = 2
+text = "Elegir Objeto"
+
+[node name="Button2" type="Button" parent="PanelContainer4/VBoxContainer" unique_id=758875234]
+layout_mode = 2
+text = "Quitar Objeto"
+
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Ajustes" to="." method="_on_ajustes_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/MenuPrincipal" to="." method="_on_menu_principal_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="PanelContainer4/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PanelContainer4/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
