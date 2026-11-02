@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dw72h63uyr2on"]
+
+[ext_resource type="Script" uid="uid://5rhwnvwpj6qh" path="res://cambio_nivel.gd" id="1_346k8"]
+[ext_resource type="Texture2D" uid="uid://bs574sqwi7bdd" path="res://cambio.png" id="1_wli6j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8jqg"]
+size = Vector2(191, 137)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_346k8"]
+atlas = ExtResource("1_wli6j")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jojbh"]
+atlas = ExtResource("1_wli6j")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpq5j"]
+atlas = ExtResource("1_wli6j")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85qap"]
+atlas = ExtResource("1_wli6j")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qm6r4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_346k8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jojbh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpq5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85qap")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=1895948281]
+script = ExtResource("1_346k8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1884279713]
+position = Vector2(-0.5, 27.5)
+shape = SubResource("RectangleShape2D_c8jqg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1937308419]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_qm6r4")
+frame_progress = 0.7477804
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
